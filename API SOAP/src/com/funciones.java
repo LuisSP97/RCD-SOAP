@@ -47,7 +47,7 @@ public class funciones {
 		apMaterno = apMaterno.replaceFirst(String.valueOf(apMaterno.charAt(0)), mayuscula);
 		
 		//creacion del saludo
-		if (genero == "M")
+		if (genero.equals("M"))
 		{
 			resultado="Sr. ";
 		}
