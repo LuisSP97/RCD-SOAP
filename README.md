@@ -1,4 +1,4 @@
-# RCD
+# RCD-SOAP
 
 Integrantes:
   - Luis Salinas Poblete
