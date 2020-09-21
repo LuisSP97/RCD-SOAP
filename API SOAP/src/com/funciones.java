@@ -1,7 +1,7 @@
 package com;
 
 public class funciones {
-	public static String nombrePropio(String nombres, String apPaterno, String apMaterno, char genero)
+	public static String nombrePropio(String nombres, String apPaterno, String apMaterno, String genero)
 	{
 		String resultado = null;
 		String mayuscula;
@@ -47,7 +47,7 @@ public class funciones {
 		apMaterno = apMaterno.replaceFirst(String.valueOf(apMaterno.charAt(0)), mayuscula);
 		
 		//creacion del saludo
-		if (genero == 'M')
+		if (genero == "M")
 		{
 			resultado="Sr. ";
 		}
@@ -69,7 +69,7 @@ public class funciones {
 
 	public static void main (String[] args) 
 	{
-		String nombre = nombrePropio("aLAN jACEK","sLaZak","cASTRO",'M');
+		String nombre = nombrePropio("aLAN jACEK","sLaZak","cASTRO","M");
 		
 		System.out.println(nombre);
 	}
