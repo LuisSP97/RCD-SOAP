@@ -1,10 +1,6 @@
 package com;
 
 public class Funciones {
-
-	
-	
-	
 	public static String nombrePropio(String nombres, String apPaterno, String apMaterno, String genero)
 	{
 		String resultado = null;
@@ -16,7 +12,7 @@ public class Funciones {
 		
 		for(int i=0; i<nombres.length();i++)
 		{
-			if(i==0 )
+			if(i==0 | nombres.charAt(i-1) ==' ')
 			{
 				mayuscula = String.valueOf(nombres.charAt(i));
 				mayuscula = mayuscula.toUpperCase();
@@ -24,13 +20,6 @@ public class Funciones {
 				nombres = nombres.replaceFirst(String.valueOf(nombres.charAt(i)), mayuscula);
 				
 				
-			}
-			else if ( nombres.charAt(i-1) ==' ')
-			{
-				mayuscula = String.valueOf(nombres.charAt(i));
-				mayuscula = mayuscula.toUpperCase();
-				
-				nombres = nombres.replaceFirst(String.valueOf(nombres.charAt(i)), mayuscula);
 			}
 			
 		
@@ -50,11 +39,11 @@ public class Funciones {
 		apMaterno = apMaterno.replaceFirst(String.valueOf(apMaterno.charAt(0)), mayuscula);
 		
 		//creacion del saludo
-		if (genero.equals("M") || genero.equals("m"))
+		if (genero.equals("M") | genero.equals("m"))
 		{
 			resultado="Sr. ";
 		}
-		else if (genero.equals("F") || genero.equals("f"))
+		else if (genero.equals("F") | genero.equals("f"))
 		{
 			resultado="Sra. ";
 		}
@@ -115,10 +104,6 @@ public class Funciones {
 		return validacion;
 	}
 	
-	public void main (String[] args)
-	{
-		
-	}
 	
 	
 	
