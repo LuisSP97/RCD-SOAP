@@ -73,7 +73,7 @@ public class Funciones {
 	}
 	
 	
-	public static boolean validarRut(String rut) {
+	public static boolean validarRut(String rut) throws java.lang.NumberFormatException {
 
 		boolean validacion = false;
 		try {
@@ -96,12 +96,10 @@ public class Funciones {
 			}
 
 		} 
-		catch (java.lang.NumberFormatException e) {
-			e.printStackTrace();
-		}
 		catch (Exception e) {
 			e.printStackTrace();
 		}
+	
 		return validacion;
 	}
 	
