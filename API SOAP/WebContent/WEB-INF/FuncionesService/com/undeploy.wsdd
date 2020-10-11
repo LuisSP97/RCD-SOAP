@@ -9,7 +9,7 @@
 <undeployment
     xmlns="http://xml.apache.org/axis/wsdd/">
 
-  <!-- Services from funcionesService WSDL service -->
+  <!-- Services from FuncionesService WSDL service -->
 
-  <service name="funciones"/>
+  <service name="Funciones"/>
 </undeployment>

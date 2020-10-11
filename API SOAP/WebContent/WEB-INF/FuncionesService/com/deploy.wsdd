@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
 
-  <!-- Services from funcionesService WSDL service -->
+  <!-- Services from FuncionesService WSDL service -->
 
-  <service name="funciones" provider="java:RPC" style="wrapped" use="literal">
+  <service name="Funciones" provider="java:RPC" style="wrapped" use="literal">
       <parameter name="wsdlTargetNamespace" value="http://com"/>
-      <parameter name="wsdlServiceElement" value="funcionesService"/>
+      <parameter name="wsdlServiceElement" value="FuncionesService"/>
       <parameter name="schemaQualified" value="http://com"/>
-      <parameter name="wsdlServicePort" value="funciones"/>
-      <parameter name="className" value="com.funciones"/>
-      <parameter name="wsdlPortType" value="funciones"/>
+      <parameter name="wsdlServicePort" value="Funciones"/>
+      <parameter name="className" value="com.Funciones"/>
+      <parameter name="wsdlPortType" value="Funciones"/>
       <parameter name="typeMappingVersion" value="1.2"/>
       <operation xmlns:operNS="http://com" name="main" qname="operNS:main" soapAction="">
         <parameter xmlns:pns="http://com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:args" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://com" xmlns:retNS="http://com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="validarRut" qname="operNS:validarRut" returnQName="retNS:validarRutReturn" returnType="rtns:boolean" soapAction="">
+        <parameter xmlns:pns="http://com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:rut" type="tns:string"/>
       </operation>
       <operation xmlns:operNS="http://com" xmlns:retNS="http://com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="nombrePropio" qname="operNS:nombrePropio" returnQName="retNS:nombrePropioReturn" returnType="rtns:string" soapAction="">
         <parameter xmlns:pns="http://com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:nombres" type="tns:string"/>
@@ -19,7 +22,12 @@
         <parameter xmlns:pns="http://com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:apMaterno" type="tns:string"/>
         <parameter xmlns:pns="http://com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:genero" type="tns:string"/>
       </operation>
-      <parameter name="allowedMethods" value="main nombrePropio"/>
+      <operation xmlns:operNS="http://com" name="setRut" qname="operNS:setRut" soapAction="">
+        <parameter xmlns:pns="http://com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:rut" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://com" xmlns:retNS="http://com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getrut" qname="operNS:getrut" returnQName="retNS:getrutReturn" returnType="rtns:string" soapAction="">
+      </operation>
+      <parameter name="allowedMethods" value="validarRut getrut main nombrePropio setRut"/>
 
   </service>
 </deployment>
