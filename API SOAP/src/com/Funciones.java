@@ -73,7 +73,7 @@ public class Funciones {
 	}
 	
 	
-	public static boolean validarRut(String rut) throws java.lang.NumberFormatException {
+	public static boolean validarRut(String rut) {
 
 		boolean validacion = false;
 		try {
