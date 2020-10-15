@@ -23,14 +23,14 @@
       <operation name="main" qname="operNS:main" xmlns:operNS="http://com" soapAction="" >
         <parameter qname="pns:args" xmlns:pns="http://com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
       </operation>
-      <operation name="validarRut" qname="operNS:validarRut" xmlns:operNS="http://com" returnQName="retNS:validarRutReturn" xmlns:retNS="http://com" returnType="rtns:boolean" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
-        <parameter qname="pns:rut" xmlns:pns="http://com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
-      </operation>
       <operation name="nombrePropio" qname="operNS:nombrePropio" xmlns:operNS="http://com" returnQName="retNS:nombrePropioReturn" xmlns:retNS="http://com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
         <parameter qname="pns:nombres" xmlns:pns="http://com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
         <parameter qname="pns:apPaterno" xmlns:pns="http://com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
         <parameter qname="pns:apMaterno" xmlns:pns="http://com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
         <parameter qname="pns:genero" xmlns:pns="http://com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="validarRut" qname="operNS:validarRut" xmlns:operNS="http://com" returnQName="retNS:validarRutReturn" xmlns:retNS="http://com" returnType="rtns:boolean" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:rut" xmlns:pns="http://com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
       </operation>
       <operation name="setRut" qname="operNS:setRut" xmlns:operNS="http://com" soapAction="" >
         <parameter qname="pns:rut" xmlns:pns="http://com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>

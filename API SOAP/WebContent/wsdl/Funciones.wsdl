@@ -14,20 +14,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
    <element name="mainResponse">
     <complexType/>
    </element>
-   <element name="validarRut">
-    <complexType>
-     <sequence>
-      <element name="rut" type="xsd:string"/>
-     </sequence>
-    </complexType>
-   </element>
-   <element name="validarRutResponse">
-    <complexType>
-     <sequence>
-      <element name="validarRutReturn" type="xsd:boolean"/>
-     </sequence>
-    </complexType>
-   </element>
    <element name="nombrePropio">
     <complexType>
      <sequence>
@@ -42,6 +28,20 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
     <complexType>
      <sequence>
       <element name="nombrePropioReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="validarRut">
+    <complexType>
+     <sequence>
+      <element name="rut" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="validarRutResponse">
+    <complexType>
+     <sequence>
+      <element name="validarRutReturn" type="xsd:boolean"/>
      </sequence>
     </complexType>
    </element>
@@ -162,18 +162,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
-      <wsdl:operation name="validarRut">
-
-         <wsdl:input message="impl:validarRutRequest" name="validarRutRequest">
-
-       </wsdl:input>
-
-         <wsdl:output message="impl:validarRutResponse" name="validarRutResponse">
-
-       </wsdl:output>
-
-      </wsdl:operation>
-
       <wsdl:operation name="nombrePropio">
 
          <wsdl:input message="impl:nombrePropioRequest" name="nombrePropioRequest">
@@ -181,6 +169,18 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
        </wsdl:input>
 
          <wsdl:output message="impl:nombrePropioResponse" name="nombrePropioResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="validarRut">
+
+         <wsdl:input message="impl:validarRutRequest" name="validarRutRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:validarRutResponse" name="validarRutResponse">
 
        </wsdl:output>
 
@@ -234,24 +234,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
-      <wsdl:operation name="validarRut">
-
-         <wsdlsoap:operation soapAction=""/>
-
-         <wsdl:input name="validarRutRequest">
-
-            <wsdlsoap:body use="literal"/>
-
-         </wsdl:input>
-
-         <wsdl:output name="validarRutResponse">
-
-            <wsdlsoap:body use="literal"/>
-
-         </wsdl:output>
-
-      </wsdl:operation>
-
       <wsdl:operation name="nombrePropio">
 
          <wsdlsoap:operation soapAction=""/>
@@ -263,6 +245,24 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
          </wsdl:input>
 
          <wsdl:output name="nombrePropioResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="validarRut">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="validarRutRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="validarRutResponse">
 
             <wsdlsoap:body use="literal"/>
 

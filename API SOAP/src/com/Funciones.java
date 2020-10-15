@@ -103,8 +103,10 @@ public class Funciones {
 		return validacion;
 	}
 	
-	
-	
+	public void main (String[] args)
+	{
+		
+	}
 	
 
 }

@@ -7,8 +7,8 @@
   <ns1:parameter name="dotNetSoapEncFix" value="true"/>
   <ns1:parameter name="enableNamespacePrefixOptimization" value="false"/>
   <ns1:parameter name="sendXMLDeclaration" value="true"/>
-  <ns1:parameter name="attachments.implementation" value="org.apache.axis.attachments.AttachmentsImpl"/>
   <ns1:parameter name="sendXsiTypes" value="true"/>
+  <ns1:parameter name="attachments.implementation" value="org.apache.axis.attachments.AttachmentsImpl"/>
   <ns1:requestFlow>
    <ns1:handler type="java:org.apache.axis.handlers.JWSHandler">
     <ns1:parameter name="scope" value="session"/>
@@ -46,11 +46,11 @@
   </ns1:operation>
   <ns1:operation name="getrut" qname="ns5:getrut" returnQName="ns5:getrutReturn" returnType="xsd:string" soapAction="" xmlns:ns5="http://com" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
   <ns1:parameter name="allowedMethods" value="validarRut getrut main nombrePropio setRut"/>
-  <ns1:parameter name="typeMappingVersion" value="1.2"/>
   <ns1:parameter name="wsdlPortType" value="funciones"/>
-  <ns1:parameter name="className" value="com.funciones"/>
-  <ns1:parameter name="wsdlServicePort" value="funciones"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
   <ns1:parameter name="schemaQualified" value="http://com"/>
+  <ns1:parameter name="wsdlServicePort" value="funciones"/>
+  <ns1:parameter name="className" value="com.funciones"/>
   <ns1:parameter name="wsdlTargetNamespace" value="http://com"/>
   <ns1:parameter name="wsdlServiceElement" value="funcionesService"/>
  </ns1:service>
@@ -62,14 +62,14 @@
   <ns1:operation name="main" qname="ns6:main" soapAction="" xmlns:ns6="http://com">
    <ns1:parameter qname="ns6:args" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
   </ns1:operation>
-  <ns1:operation name="validarRut" qname="ns7:validarRut" returnQName="ns7:validarRutReturn" returnType="xsd:boolean" soapAction="" xmlns:ns7="http://com" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-   <ns1:parameter qname="ns7:rut" type="xsd:string"/>
+  <ns1:operation name="nombrePropio" qname="ns7:nombrePropio" returnQName="ns7:nombrePropioReturn" returnType="xsd:string" soapAction="" xmlns:ns7="http://com" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns7:nombres" type="xsd:string"/>
+   <ns1:parameter qname="ns7:apPaterno" type="xsd:string"/>
+   <ns1:parameter qname="ns7:apMaterno" type="xsd:string"/>
+   <ns1:parameter qname="ns7:genero" type="xsd:string"/>
   </ns1:operation>
-  <ns1:operation name="nombrePropio" qname="ns8:nombrePropio" returnQName="ns8:nombrePropioReturn" returnType="xsd:string" soapAction="" xmlns:ns8="http://com" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-   <ns1:parameter qname="ns8:nombres" type="xsd:string"/>
-   <ns1:parameter qname="ns8:apPaterno" type="xsd:string"/>
-   <ns1:parameter qname="ns8:apMaterno" type="xsd:string"/>
-   <ns1:parameter qname="ns8:genero" type="xsd:string"/>
+  <ns1:operation name="validarRut" qname="ns8:validarRut" returnQName="ns8:validarRutReturn" returnType="xsd:boolean" soapAction="" xmlns:ns8="http://com" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns8:rut" type="xsd:string"/>
   </ns1:operation>
   <ns1:operation name="setRut" qname="ns9:setRut" soapAction="" xmlns:ns9="http://com">
    <ns1:parameter qname="ns9:rut" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
