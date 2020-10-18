@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API SOAP</title>
+    <script src="./consume.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light menu">
+        <span class="navbar-brand mb-0 h1">Trabajo nº1 RCD</span>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="./index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./rut.html">Validar RUT</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./nombre.html">Nombre propio</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <div class="container mt-4 fadeIn">
+        <div class="jumbotron inicio">
+            <h1 class="display-4">Bienvenido!</h1>
+            <p class="lead">Esta aplicacion tiene 2 funcionalidades. Validar el RUT con formato Chileno y dar formato a un nombre ingresado con sus 2 apellidos y genero.</p>
+            <p class="lead">Las funciones de esta aplicacion fueron desarrolladas en Java. Esto nos permite generar un Web Service SOAP para poder desplegarlo en Tomcat y despues consumirlo con PHP. En cuanto al front-end, fue desarrollado solo con HTML-CSS-JS y el framework
+                Bootstrap 4</p>
+            <hr class="my-4">
+            <p>Si quieres utilizar alguna de estas 2 funciones no dudes en hacer clic en alguno de los botones de abajo!</p>
+            <div class="form-inline">
+                <a class="btn btn-aqua btn-lg mr-3" href="./rut.html" role="button">Validar RUT</a>
+                <a class="btn btn-aqua btn-lg mr-3" href="./nombre.html" role="button">Formato nombre</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

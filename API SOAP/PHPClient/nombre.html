@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombre Propio</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./consume.js"></script>
+</head>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light menu">
+        <span class="navbar-brand mb-0 h1">Trabajo nº1 RCD</span>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="./index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./rut.html">Validar RUT</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./nombre.html">Nombre propio</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <div class="container mt-4 mb-4 fadeIn">
+        <h1>Nombre propio</h1>
+        <form name="formulario" method="post" action="nombrePropio.php">
+            <div class="form-group">
+                <label for="inputNombres">Nombres</label>
+                <input name="nombres" type="text" class="form-control" value="">
+            </div>
+            <div class="form-row">
+                <div class="form-group col">
+                    <label for="inputApPaterno">Apellido paterno</label>
+                    <input name="apPaterno" type="text" class="form-control" value="">
+                </div>
+                <div class="form-group col">
+                    <label for="inputApMaterno">Apellido materno</label>
+                    <input name="apMaterno" type="text" class="form-control" value="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputGenero">Genero</label>
+                <select name="genero" class="form-control">
+                    <option selected value="M">Masculino</option>
+                    <option value="F">Femenino</option>
+                </select>
+            </div>
+            <button class="btn btn-aqua">Enviar</button>
+        </form>
+    </div>
+    <div id="root">
+
+    </div>
+</body>
+
+</html>

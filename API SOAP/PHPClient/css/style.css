@@ -1,0 +1,33 @@
+body {
+    background-color: #E1EDEA;
+}
+
+.menu {
+    background-color: #66EFCD;
+}
+
+.mensaje {
+    width: 30rem;
+}
+
+.inicio {
+    border-style: solid;
+    border-color: #66EFCD;
+    border-radius: 2rem;
+}
+
+.btn-aqua {
+    background-color: #66EFCD;
+}
+
+.btn-aqua:hover {
+    background-color: #9be2d0;
+}
+
+.btn-pink {
+    background-color: #F08686;
+}
+
+.btn-pink:hover {
+    background-color: #dbaaaa;
+}

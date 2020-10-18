@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar RUT</title>
+    <script src="./consume.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light menu">
+        <span class="navbar-brand mb-0 h1">Trabajo nº1 RCD</span>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="./index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./rut.html">Validar RUT</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./nombre.html">Nombre propio</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <div class="container mt-4 mb-4 fadeIn">
+        <h1>Validador de RUT</h1>
+        <form name="formulario" method="post" action="validarRut.php">
+            <div class="form-group">
+                <label for="inputRut">Rut</label>
+                <input name="rut" type="text" class="form-control" aria-describedby="rutHelp">
+                <small id="rutHelp" class="form-text text-muted">Formato rut: 12.345.678-9</small>
+            </div>
+            <button class="btn btn-aqua">Validar</button>
+        </form>
+    </div>
+    <div id="root">
+
+    </div>
+</body>
+
+</html>
