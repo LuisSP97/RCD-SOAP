@@ -4,16 +4,6 @@
 Built on Apr 22, 2006 (06:55:48 PDT)-->
  <wsdl:types>
   <schema elementFormDefault="qualified" targetNamespace="http://com" xmlns="http://www.w3.org/2001/XMLSchema">
-   <element name="main">
-    <complexType>
-     <sequence>
-      <element maxOccurs="unbounded" name="args" type="xsd:string"/>
-     </sequence>
-    </complexType>
-   </element>
-   <element name="mainResponse">
-    <complexType/>
-   </element>
    <element name="nombrePropio">
     <complexType>
      <sequence>
@@ -45,56 +35,12 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
      </sequence>
     </complexType>
    </element>
-   <element name="setRut">
-    <complexType>
-     <sequence>
-      <element name="rut" type="xsd:string"/>
-     </sequence>
-    </complexType>
-   </element>
-   <element name="setRutResponse">
-    <complexType/>
-   </element>
-   <element name="getrut">
-    <complexType/>
-   </element>
-   <element name="getrutResponse">
-    <complexType>
-     <sequence>
-      <element name="getrutReturn" type="xsd:string"/>
-     </sequence>
-    </complexType>
-   </element>
   </schema>
  </wsdl:types>
 
    <wsdl:message name="nombrePropioResponse">
 
       <wsdl:part element="impl:nombrePropioResponse" name="parameters">
-
-      </wsdl:part>
-
-   </wsdl:message>
-
-   <wsdl:message name="getrutRequest">
-
-      <wsdl:part element="impl:getrut" name="parameters">
-
-      </wsdl:part>
-
-   </wsdl:message>
-
-   <wsdl:message name="mainResponse">
-
-      <wsdl:part element="impl:mainResponse" name="parameters">
-
-      </wsdl:part>
-
-   </wsdl:message>
-
-   <wsdl:message name="mainRequest">
-
-      <wsdl:part element="impl:main" name="parameters">
 
       </wsdl:part>
 
@@ -116,14 +62,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    </wsdl:message>
 
-   <wsdl:message name="setRutResponse">
-
-      <wsdl:part element="impl:setRutResponse" name="parameters">
-
-      </wsdl:part>
-
-   </wsdl:message>
-
    <wsdl:message name="nombrePropioRequest">
 
       <wsdl:part element="impl:nombrePropio" name="parameters">
@@ -132,35 +70,7 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    </wsdl:message>
 
-   <wsdl:message name="getrutResponse">
-
-      <wsdl:part element="impl:getrutResponse" name="parameters">
-
-      </wsdl:part>
-
-   </wsdl:message>
-
-   <wsdl:message name="setRutRequest">
-
-      <wsdl:part element="impl:setRut" name="parameters">
-
-      </wsdl:part>
-
-   </wsdl:message>
-
    <wsdl:portType name="Funciones">
-
-      <wsdl:operation name="main">
-
-         <wsdl:input message="impl:mainRequest" name="mainRequest">
-
-       </wsdl:input>
-
-         <wsdl:output message="impl:mainResponse" name="mainResponse">
-
-       </wsdl:output>
-
-      </wsdl:operation>
 
       <wsdl:operation name="nombrePropio">
 
@@ -186,53 +96,11 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
-      <wsdl:operation name="setRut">
-
-         <wsdl:input message="impl:setRutRequest" name="setRutRequest">
-
-       </wsdl:input>
-
-         <wsdl:output message="impl:setRutResponse" name="setRutResponse">
-
-       </wsdl:output>
-
-      </wsdl:operation>
-
-      <wsdl:operation name="getrut">
-
-         <wsdl:input message="impl:getrutRequest" name="getrutRequest">
-
-       </wsdl:input>
-
-         <wsdl:output message="impl:getrutResponse" name="getrutResponse">
-
-       </wsdl:output>
-
-      </wsdl:operation>
-
    </wsdl:portType>
 
    <wsdl:binding name="FuncionesSoapBinding" type="impl:Funciones">
 
       <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
-
-      <wsdl:operation name="main">
-
-         <wsdlsoap:operation soapAction=""/>
-
-         <wsdl:input name="mainRequest">
-
-            <wsdlsoap:body use="literal"/>
-
-         </wsdl:input>
-
-         <wsdl:output name="mainResponse">
-
-            <wsdlsoap:body use="literal"/>
-
-         </wsdl:output>
-
-      </wsdl:operation>
 
       <wsdl:operation name="nombrePropio">
 
@@ -263,42 +131,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
          </wsdl:input>
 
          <wsdl:output name="validarRutResponse">
-
-            <wsdlsoap:body use="literal"/>
-
-         </wsdl:output>
-
-      </wsdl:operation>
-
-      <wsdl:operation name="setRut">
-
-         <wsdlsoap:operation soapAction=""/>
-
-         <wsdl:input name="setRutRequest">
-
-            <wsdlsoap:body use="literal"/>
-
-         </wsdl:input>
-
-         <wsdl:output name="setRutResponse">
-
-            <wsdlsoap:body use="literal"/>
-
-         </wsdl:output>
-
-      </wsdl:operation>
-
-      <wsdl:operation name="getrut">
-
-         <wsdlsoap:operation soapAction=""/>
-
-         <wsdl:input name="getrutRequest">
-
-            <wsdlsoap:body use="literal"/>
-
-         </wsdl:input>
-
-         <wsdl:output name="getrutResponse">
 
             <wsdlsoap:body use="literal"/>
 
